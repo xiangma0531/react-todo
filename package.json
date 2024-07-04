@@ -2,16 +2,21 @@
   "name": "react_todo",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "5.4.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "axios": "^1.7.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "esbuild-loader": "^4.2.0",
+    "node-sass": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -19,11 +24,12 @@
     "react-router-dom": "^6.24.0",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11",
+    "ts-loader": "^9.5.1",
     "turbolinks": "^5.2.0",
     "typescript": "^5.5.3"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^5.0.4"
+    "webpack-dev-server": "^3"
   }
 }
