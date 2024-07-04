@@ -3,24 +3,33 @@
 // of the page.
 
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import PropTypes from 'prop-types'
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
-
-Hello.defaultProps = {
-  name: 'David'
+type Props = {
+  name: string;
 }
+
+const Hello = (props: Props) => {
+  const { name } = props;
+  return <div>Hello {name}!</div>
+};
+
 
 Hello.propTypes = {
   name: PropTypes.string
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Hello name="React" />,
-    document.body.appendChild(document.createElement('div')),
-  )
-})
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <React.StrictMode>
+    <Hello name="React" />
+  </React.StrictMode>
+);
+// document.addEventListener('DOMContentLoaded', () => {
+//   ReactDOM.render(
+//     <Hello name="React" />,
+//     document.body.appendChild(document.createElement('div')),
+//   )
+// })
